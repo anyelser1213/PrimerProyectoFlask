@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Publicacion con flask</title>
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+</head>
+
+<body>
+
+    <main class="container p-4">
+        <h1 class="display-4 text-center title mt-4">Actualizar Publicacion</h1>
+        <div class="row">
+
+            <div class="col-md-4 offset-md-4 my-auto">
+
+                <div class="card">
+                    <div class="card-header">
+
+                        <form action="/update/{{publicacion.id}}" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="contenido" placeholder="Publicacion" value="{{publicacion.contenido}}"  class="form-control" autofocus>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
+                        </form>
+                    </div>
+                    <div class="card-body">
+
+
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
